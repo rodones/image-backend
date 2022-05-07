@@ -38,32 +38,6 @@ It is written in Java 11 using Spring Boot framework. It is deployed and publish
 - Clone repository.
 - Open project with Intellij Idea and let it install maven dependencies.
 
-### Configuration and Profiles
-
-#### Application Configuration File
-
-*application.yml* is the only configuration file for application. All common configurations must be declared here.
-
-The newly added configurations must be specified
-in `src/main/resources/META-INF/additional-spring-configuration-metadata.json`.
-
-#### Profiles
-
-`dev` is for development/staging branch of the application and `prod` is master branch of the application.
-
-There are two primary profiles named `dev` and `prod`. Profile specific variables can be found in folder named after
-profile name in _src/main/resources/filters/_. These are called as maven filters. Maven replaces their occurrences in
-all resources with their values.
-
-The secondary profile is `local`. It must be activated during development on your computer.
-**If you don't activate it, the application assumes it is running on server.**
-
-## Messages, Templates, Static files etc.
-
-### Messages
-
-All resource bundles located in _src/main/resources/messages_ folder. Try to follow
-
 ## Database
 
 ### Naming Convention
